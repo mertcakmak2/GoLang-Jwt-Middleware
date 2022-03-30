@@ -26,6 +26,7 @@ func Login(creds model.Credentials) (string, error) {
 	expirationTime := time.Now().Add(24 * time.Hour)
 	claims := &model.Claims{
 		Username: creds.Username,
+		Roles:    []string{"ADMIN", "SUPERADMIN"},
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: expirationTime.Unix(),
 		},
