@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:     
+  golang-jwt:
+    restart: always
+    image: mertcakmak2/golang-jwt
+    container_name: golang-jwt
+    ports:
+      - 8091:8091
